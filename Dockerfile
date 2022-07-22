@@ -1,5 +1,4 @@
-FROM maven:3.8.6-openjdk-18-slim AS build
-WORKDIR /RelCrud
-COPY . .
-RUN mvn clean install
-CMD mvn spring-boot:run
+FROM openjdk:18-alpine
+ADD target/RelCrud-0.0.1-SNAPSHOT.jar RelCrud-0.0.1-SNAPSHOT.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","RelCrud-0.0.1-SNAPSHOT.jar"]

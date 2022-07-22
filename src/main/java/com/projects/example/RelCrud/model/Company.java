@@ -1,12 +1,16 @@
 package com.projects.example.RelCrud.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "companies")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Company {
 
     @Id
